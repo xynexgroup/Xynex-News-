@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XYNEX — News Intelligence</title>
+  <meta name="description" content="Essential AI news. WHAT, WHY, HOW, IMPACT — analyzed by Gemini." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <!-- ══════════ TOP BAR ══════════ -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">◈</div>
+      <div class="brand-text">
+        <span class="brand-name">XYNEX</span>
+        <span class="brand-sub">NEWS INTELLIGENCE</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="live-pill" id="livePill">
+        <span class="live-dot"></span>
+        <span id="liveText">LIVE</span>
+      </div>
+      <span class="last-updated" id="lastUpdated">—</span>
+      <button class="refresh-btn" id="refreshBtn" title="Refresh feed">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-2.64-6.36M21 3v6h-6"/></svg>
+        <span>REFRESH</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ HEADLINE TICKER ══════════ -->
+  <div class="ticker-wrap">
+    <div class="ticker-label">BREAKING</div>
+    <div class="ticker-viewport">
+      <div class="ticker-track" id="tickerTrack"></div>
+    </div>
+  </div>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero">
+    <div class="hero-line reveal">ESSENTIAL SIGNALS ONLY</div>
+    <h1 class="hero-title reveal">AI intelligence,<br /><span class="grad">distilled to the bone.</span></h1>
+    <p class="hero-sub reveal">Every story decoded — <em>what</em> happened, <em>why</em> it happened, <em>how</em> it happened, and <em>what happens next</em>.</p>
+    <div class="stats-row reveal" id="statsRow"></div>
+  </section>
+
+  <!-- ══════════ FEED ══════════ -->
+  <main class="feed" id="feed">
+    <div class="feed-head reveal">
+      <h2>LATEST SIGNALS</h2>
+      <div class="feed-filters" id="feedFilters"></div>
+    </div>
+    <div class="feed-grid" id="feedGrid"></div>
+  </main>
+
+  <!-- ══════════ DETAIL PANEL ══════════ -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="detail-panel" id="detailPanel" aria-hidden="true">
+    <button class="panel-close" id="panelClose" aria-label="Close">✕</button>
+    <div class="panel-scroll" id="panelScroll"></div>
+  </aside>
+
+  <footer class="footer">
+    <span>XYNEX // built for clarity, not noise</span>
+    <span class="footer-right">ANALYSIS ENGINE · GEMINI</span>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
